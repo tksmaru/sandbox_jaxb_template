@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="unqualified" version="1.0" targetNamespace="http://www.sandbox.tksmaru.org/jaxb/config" xmlns:tns="http://www.sandbox.tksmaru.org/jaxb/config" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="config" type="tns:config"/>
+
+  <xs:complexType name="config">
+    <xs:sequence>
+      <xs:element name="bloodType" type="tns:bloodType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="bloodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="O"/>
+      <xs:enumeration value="B"/>
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="AB"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
